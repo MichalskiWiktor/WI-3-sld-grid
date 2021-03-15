@@ -1,0 +1,66 @@
+body{
+	counter-reset: slide;
+}
+main{
+	width:60%;
+	margin-right: auto;
+	margin-left: auto;
+}
+article{
+	display: grid;
+	grid-auto-flow: row;
+	grid-row-gap: 20px;
+	grid-auto-rows: 35px;
+	grid-column-gap: 30px;
+	grid-template-columns: 5%;
+	grid-template-rows: 70px 500px;
+	margin-top: 2%;
+}
+article > header{
+	grid-column: 1/20;
+	grid-row: 1;
+}
+article > section{
+	grid-row: 2;
+	grid-column: 1/18;
+	grid-column-start: 2;
+	grid-column-end: 19;
+}
+article > .square{
+	grid-row: 3;
+	grid-column-start: 18;
+	grid-column-end: 19;
+}
+article > .rectangle{
+	grid-row: 3;
+	grid-column: 1/18;
+	grid-column-start: 2;
+}
+article > section > section{
+	width:95%;
+	height:30px;
+	margin-top: 3%;
+	margin-left: auto;
+	margin-right: auto;
+}
+#slide3 > .firstHalf, #slide4 > .firstHalf{
+	grid-column-start: 2;
+	grid-column-end: 10;
+}
+#slide3 > .secondHalf, #slide4 > .secondHalf{
+	grid-column-start: 11;
+	grid-column-end: 19;
+}
+#slide4 > article{
+	grid-column: 1/19;
+	grid-column-start: 2;
+	grid-row-start: 3;
+	grid-row-end: 6;
+}
+#slide4 > .square, #slide4 >.rectangle{
+	grid-row: 6;
+}
+.square:after{
+	counter-increment: slide;
+	content: counter(slide);
+}

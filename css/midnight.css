@@ -1,0 +1,42 @@
+@import url("style.css");
+:root{
+	--main-color: #132233;
+    --accent-color:#139e54;
+	--Headertext-color:white;
+    --text-color:#132233;
+    --background-color:white;
+    --text-size: 2rem;
+    --font-family:'Roboto', sans-serif;
+}
+body
+article{
+	border: 1px solid #a8a7a7;
+    background-color: var(--background-color);
+}
+article > header{
+	background-color:var(--main-color);
+	border: 1px solid var(--main-color);
+	font-size: var(--text-size);
+	font-family: var(--font-family);
+	color:var(--Headertext-color);
+	letter-spacing: 3px;
+    text-align: center;
+    line-height: 0;
+}
+article > section{
+	border: 1px solid #a8a7a7;
+	color:var(--text-color);
+	font-size:var(--text-size);
+}
+.square{
+	background-color:var(--accent-color);
+	color:white;
+	font-size: var(--text-size);
+    text-align: center;
+}
+.rectangle{
+	background-color: var(--main-color);
+}
+article > section > section{
+	border: 1px solid #a8a7a7;
+}
